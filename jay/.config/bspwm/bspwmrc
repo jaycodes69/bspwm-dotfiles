@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# --- Helper function to start programs only if not running ---
+run() {
+	pgrep -x "$1" >/dev/null || "$@" &
+}
+
+# --- Start background services ---
+run sxhkd
+run picom -b --config ~/.config/picom/picom.conf
+run feh --bg-fill ~/pictures/walls/dracula.png
+
+# --- Set desktops for monitor ---
+bspc monitor -d 1 2 3 4 5 6
+
+# --- Appearance & behavior ---
+bspc config border_width         3
+bspc config window_gap           0
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# --- Window rules ---
+
+# Brave browser → Desktop 2
+bspc rule -a Brave-browser desktop='^2' follow=on focus=on state=tiled
+
