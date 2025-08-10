@@ -9,6 +9,7 @@ run() {
 run sxhkd
 run picom -b --config ~/.config/picom/picom.conf
 run feh --bg-fill ~/pictures/walls/dracula.png
+run dunst
 
 # --- Set desktops for monitor ---
 bspc monitor -d 1 2 3 4 5 6
