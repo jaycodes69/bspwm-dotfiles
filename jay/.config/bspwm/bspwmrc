@@ -2,7 +2,7 @@
 
 # --- Helper function to start programs only if not running ---
 run() {
-	pgrep -x "$1" >/dev/null || "$@" &
+  pgrep -x "$1" >/dev/null || "$@" &
 }
 
 # --- Start background services ---
@@ -10,6 +10,8 @@ run sxhkd
 run picom -b --config ~/.config/picom/picom.conf
 run feh --bg-fill ~/pictures/walls/dracula.png
 run dunst
+run kitty
+run brave
 
 # --- Set desktops for monitor ---
 bspc monitor -d 1 2 3 4 5 6
@@ -23,6 +25,10 @@ bspc config gapless_monocle      true
 
 # --- Window rules ---
 
-# Brave browser → Desktop 2
-bspc rule -a Brave-browser desktop='^2' follow=on focus=on state=tiled
+# Kitty → Desktop 1
+bspc rule -a kitty desktop='^1' follow=on focus=on state=fullscreen
 
+# Brave browser → Desktop 2
+bspc rule -a Brave-browser desktop='^2' follow=on focus=on state=fullscreen
+# Webcord → Desktop 3
+bspc rule -a discord ='^3' follow=on focus=on state=fullscreen

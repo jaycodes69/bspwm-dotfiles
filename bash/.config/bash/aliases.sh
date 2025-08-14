@@ -8,7 +8,9 @@ alias tk="tmux kill-session -t"
 # Neovim
 alias v="nvim"
 alias vi="nvim"
-alias vim="nvim"
+
+
+alias discord="discordo -t MTM5MzgxMTY3NTU5MjkyMTE1OA.GiU_8z.XRSkIeO2ORU9ZZdRfqGBffK2_Sa0PSMslYGX04"
 
 # Eza
 alias l="eza -A --icons --group-directories-first"

@@ -7,8 +7,12 @@ super + Return
 	kitty
 
 # program launcher
-super + @space
+super + r
 	rofi -show drun
+
+# window launcher
+super + @space
+	rofi -show window
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -16,6 +20,9 @@ super + Escape
 
 super + b
     ~/.config/scripts/battery.sh
+
+super + s
+    flameshot gui
 
 #
 # bspwm hotkeys

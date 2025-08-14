@@ -1,72 +1,41 @@
 [global]
-    # Positioning & appearance
-    follow = mouse
-    monitor = 0
-    width = (300, 300)           # Fixed width 300px
-    height = (100, 100)              # Auto height
-    origin = top-right
-    offset = (10, 30)
-    scale = 0
-    notification_limit = 10
+follow = mouse
+  origin = bottom-right
+  offset = (10, 20)
+  width = (270, 270)
+height = (120, 120)
+  transparency = 15
+  frame_width = 1
+  corner_radius = 8
+  padding = 10
+  horizontal_padding = 15
+  text_icon_padding = 8
+  font = Inter 14
+  markup = full
+  format = "<b><span foreground='#ff79c6'>%s</span></b>\n<span foreground='#f8f8f2'>%b</span>"
+  icon_position = left
+  min_icon_size = 24
+  max_icon_size = 48
+  notification_limit = 8
+  sticky_history = true
+  history_length = 15
+  stack_duplicates = true
+  show_age_threshold = 60
+  mouse_left_click = do_action
+  mouse_right_click = close_all
 
-    # Transparency and border
-    transparency = 15
-    frame_width = 1
-    frame_color = "#44475a"      # Dracula current line color
-    separator_height = 1
-    separator_color = "#44475a"
-    corner_radius = 8
-    padding = 10
-    horizontal_padding = 15
-    text_icon_padding = 8
+  [urgency_low]
+  background = "#282a36"
+  foreground = "#6272a4"
+  timeout = 5
 
-    # Fonts and markup
-    font = Inter 15
-    markup = full
-    format = "<b><span foreground='#ff79c6'>%s</span></b>\n<span foreground='#f8f8f2'>%b</span>"
-    alignment = left
-    vertical_alignment = center
-    ellipsize = middle
+  [urgency_normal]
+  background = "#282a36"
+  foreground = "#bd93f9"
+  timeout = 8
 
-    # Icon settings
-    icon_position = left
-    min_icon_size = 24
-    max_icon_size = 48
-
-    # Behavior
-    sticky_history = true
-    history_length = 20
-    stack_duplicates = true
-    hide_duplicate_count = false
-    show_age_threshold = 60
-    show_indicators = yes
-
-    # Scripts and commands
-    browser = firefox -new-tab
-    dmenu = rofi -dmenu -p dunst:
-    always_run_script = true
-    title = Dunst
-    class = Dunst
-    ignore_dbusclose = false
-    force_xwayland = false
-
-    # Mouse actions
-    mouse_left_click = close_current
-    mouse_middle_click = do_action, close_current
-    mouse_right_click = close_all
-
-[urgency_low]
-    background = "#282a36"
-    foreground = "#6272a4"       # Dracula comment color
-    timeout = 5
-
-[urgency_normal]
-    background = "#282a36"
-    foreground = "#bd93f9"       # Dracula purple
-    timeout = 8
-
-[urgency_critical]
-    background = "#ff5555"
-    foreground = "#f8f8f2"
-    frame_color = "#ff5555"
-    timeout = 0
+  [urgency_critical]
+  background = "#ff5555"
+  foreground = "#f8f8f2"
+  frame_color = "#ff5555"
+  timeout = 0
