@@ -13,7 +13,7 @@ eval "$(zoxide init bash --cmd j)"
 
 # Auto start tmux with discordo unless already inside tmux
 if command -v tmux >/dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t discord 2>/dev/null || tmux new -s discord 'discordo'
+    tmux attach -t main 2>/dev/null || tmux new -s main 'main'
 fi
 
 PS1='\[\e[1;36m\]\u\[\e[0m\]@\[\e[1;32m\]\h \[\e[1;34m\]\w \[\e[0m\]\$ '
