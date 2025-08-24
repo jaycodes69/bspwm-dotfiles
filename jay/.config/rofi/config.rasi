@@ -1,4 +1,4 @@
-/*Dracula theme based on the Purple official rofi theme*/
+/* Tokyo Night theme based on your Dracula config */
 
 configuration {
     show-icons:      true;
@@ -7,17 +7,17 @@ configuration {
 }
 
 * {
-    font: "Jetbrains Mono 12";
-    foreground: #f8f8f2;
-    background-color: #282a36;
-    active-background: #6272a4;
-    urgent-background: #ff5555;
-    urgent-foreground: #282a36;
+    font: "Inter 14";
+    foreground: #c0caf5;           /* light blue text */
+    background-color: #1a1b26;     /* dark background */
+    active-background: #7aa2f7;    /* bright blue for active */
+    urgent-background: #f7768e;    /* red/pink for urgent */
+    urgent-foreground: #1a1b26;    /* dark text on urgent */
     selected-background: @active-background;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
-    separatorcolor: @active-background;
-    bordercolor: @active-background;
+    separatorcolor: #414868;       /* muted gray/blue separator */
+    bordercolor: #414868;
 }
 
 #window {
@@ -43,13 +43,13 @@ configuration {
     fixed-height: 0;
     border:       0px;
     border-color: @bordercolor;
-    spacing:      2px ;
+    spacing:      2px;
     scrollbar:    false;
-    padding:      2px 0px 0px ;
+    padding:      2px 0px 0px;
 }
 #element {
     border:  0;
-    padding: 3px ;
+    padding: 3px;
 }
 #element.normal.normal {
     background-color: @background-color;
@@ -76,7 +76,7 @@ configuration {
     text-color:       @foreground;
 }
 #element.alternate.normal {
-    background-color: @background-color;
+    background-color: #16161e;      /* slightly darker alternate */
     text-color:       @foreground;
 }
 #element.alternate.urgent {
@@ -88,13 +88,13 @@ configuration {
     text-color:       @foreground;
 }
 #scrollbar {
-    width:        2px ;
+    width:        2px;
     border:       0;
-    handle-width: 8px ;
+    handle-width: 8px;
     padding:      0;
 }
 #sidebar {
-    border:       2px dash 0px 0px ;
+    border:       2px dash 0px 0px;
     border-color: @separatorcolor;
 }
 #button.selected {
@@ -104,7 +104,7 @@ configuration {
 #inputbar {
     spacing:    0;
     text-color: @foreground;
-    padding:    1px ;
+    padding:    1px;
 }
 #case-indicator {
     spacing:    0;
@@ -124,7 +124,7 @@ configuration {
 #textbox-prompt-colon {
     expand:     false;
     str:        ">";
-    margin:     0px 0.3em 0em 0em ;
+    margin:     0px 0.3em 0em 0em;
     text-color: @foreground;
 }
 element-text, element-icon {

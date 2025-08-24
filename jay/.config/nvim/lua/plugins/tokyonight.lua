@@ -12,6 +12,8 @@ return {
 				styles = {
 					comments = { italic = false }, -- Disable italics in comments
 				},
+				transparent = true,
+				terminal_colors = true,
 			})
 
 			-- Load the colorscheme here.

@@ -12,7 +12,7 @@ height = (120, 120)
   text_icon_padding = 8
   font = Inter 14
   markup = full
-  format = "<b><span foreground='#ff79c6'>%s</span></b>\n<span foreground='#f8f8f2'>%b</span>"
+  format = "<b><span foreground='#7aa2f7'>%s</span></b>\n<span foreground='#c0caf5'>%b</span>"
   icon_position = left
   min_icon_size = 24
   max_icon_size = 48
@@ -25,17 +25,17 @@ height = (120, 120)
   mouse_right_click = close_all
 
   [urgency_low]
-  background = "#282a36"
-  foreground = "#6272a4"
+  background = "#1a1b26"   # Tokyo Night dark background
+  foreground = "#414868"   # subtle blue-gray
   timeout = 5
 
   [urgency_normal]
-  background = "#282a36"
-  foreground = "#bd93f9"
+  background = "#1a1b26"   # same dark background
+  foreground = "#7aa2f7"   # bright blue accent
   timeout = 8
 
   [urgency_critical]
-  background = "#ff5555"
-  foreground = "#f8f8f2"
-  frame_color = "#ff5555"
+  background = "#f7768e"   # pink/red accent
+  foreground = "#1a1b26"   # dark text for contrast
+  frame_color = "#f7768e"  # matching frame
   timeout = 0
